@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*v modale button */
+.overlay {
+  background: rgba(0,0,0,.4);
+  position: absolute;
+  top: 0; bottom: 0; right: 0; left: 0;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  transition: .7s;
+}
+/*v btn-start */
+.btn-start {
+  background: #f9ecff;
+  font-size: 2.5em;
+  padding: .3em 1em;
+  border: solid 1px;
+  border-radius: 10px;
+  outline: none;
+  font-family: roboto;
+  cursor: pointer;
+  transition: .2s background;
+}
+.btn-start:hover {
+  background: #c3d4e6;
+}
+.btn-start:active {
+  background: #dd0033;
+}
+ 
+/*^ btn-start */
+/*^ modale button */
+/*v circle */
+.theCircle {
+  border: solid ;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+  
+  box-shadow: 0px 5px 8px 0 rgba(0,0,0,.8); 
+  
+  display: grid;
+  grid-template-columns: auto auto;
+}
+/*v quarter */
+.quarter {
+  border: solid .1px;
+  height: 150px;
+  width: 150px; 
+  cursor: pointer;
+  transition: .3s;
+}
+.quarter {
+  background-image: radial-gradient(circle, rgba(0,0,0,.4), rgba(0,0,0,.7));
+
+}
+.quarter:active {
+  background-image: radial-gradient(circle, rgba(0,0,0,0), rgba(0,0,0,.5));
+}
+
+.quarter:nth-of-type(1) {
+  background-color: #167fb2;
+}
+.quarter:nth-of-type(2) {
+  background-color: #00bbe3;
+  
+}
+.quarter:nth-of-type(3) {
+  background-color: #e1cd66;
+}
+.quarter:nth-of-type(4) {
+  background-color: #673983;
+}
+/*^ quarter */
+/*^ circle */
+
+/*v classList added */
+/*v overlay */
+.overlay.in-game {
+  opacity: 0;
+  visibility: hidden;
+}
+.btn-start.in-game {
+  animation: .7s in-game forwards;
+}
+@keyframes in-game {
+  from {
+   transform: translateY(0); 
+  }
+  20% {
+   transform: translateY(40px); 
+  }
+  to {
+   transform: translateY(-100vh);
+  }
+}
+
+
+/*^ overlay */
+
+
+
+/*v quarter */
+.quarter.high {
+  background-image: radial-gradient(circle, rgba(0,0,0,0), rgba(0,0,0,.5));
+}
+
+.quarter.defeat {
+  background-color: #8e0000;
+  background-image: radial-gradient(circle, rgba(0,0,0,0), rgba(0,0,0,.5));
+}
+/*^ quarter */
+/*^ classList added */
+/*v shield  */
+.shield {
+  background: transparent;
+  position: absolute;
+  top: 0; bottom: 0; right: 0; left: 0;
+  visibility: hidden;
+}
+
+/*^ shield  */
